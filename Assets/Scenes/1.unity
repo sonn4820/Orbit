@@ -130,9 +130,10 @@ GameObject:
   m_Component:
   - component: {fileID: 22405180}
   - component: {fileID: 22405179}
-  - component: {fileID: 22405183}
   - component: {fileID: 22405182}
   - component: {fileID: 22405181}
+  - component: {fileID: 22405184}
+  - component: {fileID: 22405183}
   m_Layer: 2
   m_Name: Player
   m_TagString: Untagged
@@ -264,9 +265,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ca1ab7a0436d3540aaeab3421ca452d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  grounded: 0
+  grounded1: 0
+  grounded2: 0
   groundCheck1: {fileID: 1431573676}
   groundCheck2: {fileID: 2101024967}
+--- !u!114 &22405184
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 22405178}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b98129c9128d55d49961426fb385c091, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &138675318
 GameObject:
   m_ObjectHideFlags: 0
@@ -281,7 +295,7 @@ GameObject:
   - component: {fileID: 138675322}
   m_Layer: 0
   m_Name: O1
-  m_TagString: Untagged
+  m_TagString: orbit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -373,7 +387,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 138675318}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -1922,7 +1936,7 @@ GameObject:
   - component: {fileID: 1319320210}
   m_Layer: 0
   m_Name: O2
-  m_TagString: Untagged
+  m_TagString: orbit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1984,7 +1998,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1319320206}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0, y: -1.63, z: 0}
+  m_LocalPosition: {x: 0.03, y: -2.18, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2170,7 +2184,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1431573676}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.25, z: 0}
+  m_LocalPosition: {x: -0.007, y: 0.291, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 22405180}
@@ -2264,7 +2278,7 @@ GameObject:
   - component: {fileID: 2095319967}
   m_Layer: 0
   m_Name: O3
-  m_TagString: Untagged
+  m_TagString: orbit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2356,7 +2370,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2095319963}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -2393,7 +2407,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2101024967}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.222, z: 0}
+  m_LocalPosition: {x: -0.007, y: -0.283, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 22405180}
