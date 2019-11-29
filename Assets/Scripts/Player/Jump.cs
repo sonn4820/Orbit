@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : MonoBehaviour
+public class Jump : MonoBehaviour
 {
     public bool grounded1 = false;
     public bool grounded2 = false;
@@ -10,16 +10,19 @@ public class Player : MonoBehaviour
     public GameObject groundCheck2 = null;
     float runSpeed = 4;
     float jumpForce = 400;
+    Rigidbody2D rb;
+
 
     // Start is called before the first frame update
     void Start()
     {
-
+        
     }
 
     // Update is called once per frame
     void Update()
     {
+        
         Debug.DrawLine(transform.position, groundCheck1.transform.position);
         Debug.DrawLine(transform.position, groundCheck2.transform.position);
 
@@ -56,4 +59,5 @@ public class Player : MonoBehaviour
             GetComponent<Rigidbody2D>().AddForce(new Vector2(0, -jumpForce));
         }
     }
+    
 }

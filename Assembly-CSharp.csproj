@@ -65,7 +65,7 @@
     <Compile Include="Assets\Scripts\Objects\Fast.cs" />
     <Compile Include="Assets\Scripts\Objects\Medium.cs" />
     <Compile Include="Assets\Scripts\Objects\Slow.cs" />
-    <Compile Include="Assets\Scripts\Player\Player.cs" />
+    <Compile Include="Assets\Scripts\Player\Jump.cs" />
     <Compile Include="Assets\Scripts\Player\Stick.cs" />
     <Compile Include="Assets\Scripts\UI\Title.cs" />
     <Reference Include="Unity.Timeline.Editor">
