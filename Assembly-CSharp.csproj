@@ -69,7 +69,7 @@
     <Compile Include="Assets\Scripts\Player\Camera.cs" />
     <Compile Include="Assets\Scripts\Player\NextLv1.cs" />
     <Compile Include="Assets\Scripts\Player\Player.cs" />
-    <Compile Include="Assets\Scripts\UI\Lv1.cs" />
+    <Compile Include="Assets\Scripts\UI\Restart.cs" />
     <Compile Include="Assets\Scripts\UI\Title.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/sonng/Documents/QU/GDD 210/Project2/Project_2_Orbit/Project_2/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>

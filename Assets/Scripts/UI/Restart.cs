@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Lv1 : MonoBehaviour
+public class Restart : MonoBehaviour
 {
     public GameObject panel;
     public GameObject player;
@@ -22,8 +22,16 @@ public class Lv1 : MonoBehaviour
     }
 
     // Update is called once per frame
-    public void Restart()
+    public void RestartLv1()
     {
         SceneManager.LoadScene("1");
+    }
+    public void RestartLv2()
+    {
+        SceneManager.LoadScene("2");
+    }
+    public void RestartLv3()
+    {
+        SceneManager.LoadScene("3");
     }
 }
