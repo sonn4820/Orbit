@@ -8,7 +8,7 @@ public class Jump : MonoBehaviour
     public bool grounded2 = false;
     public GameObject groundCheck1 = null;
     public GameObject groundCheck2 = null;
-    float runSpeed = 4;
+
     float jumpForce = 400;
     Rigidbody2D rb;
 
