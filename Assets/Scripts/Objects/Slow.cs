@@ -5,7 +5,7 @@ using UnityEngine;
 public class Slow : MonoBehaviour
 {
     public Transform Player;
-    private float gForce = 1.5f;
+    private float gForce = 2f;
     private Vector3 dir;
 
     // Start is called before the first frame update
@@ -21,7 +21,7 @@ public class Slow : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Rotate(0, 0, 1.5f);
-        Physics2D.gravity = new Vector2(2, 2);
+        transform.Rotate(0, 0, 2f);
+        //Physics2D.gravity = new Vector2(2, 2);
     }
 }
