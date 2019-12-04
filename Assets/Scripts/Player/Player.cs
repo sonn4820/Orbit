@@ -17,7 +17,7 @@ public class Player : MonoBehaviour
         //If not on the circle, keep moving in moveDirection.
         if (!onCircle)
         {
-            transform.position += moveDirection * 2 * Time.deltaTime;
+            transform.position += moveDirection * 3 * Time.deltaTime;
         }
         //If on the circle, update our moveDirection vector and wait for SPACE to jump.
         else
