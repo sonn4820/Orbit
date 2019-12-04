@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -1421,7 +1421,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1556771225
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1748,8 +1748,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1.2, y: 93.7}
-  m_SizeDelta: {x: 438, y: 439}
+  m_AnchoredPosition: {x: 1.2, y: 50.8}
+  m_SizeDelta: {x: 438, y: 671.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1825023416
 MonoBehaviour:
@@ -1773,10 +1773,10 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 99
+    m_FontSize: 80
     m_FontStyle: 0
-    m_BestFit: 1
-    m_MinSize: 9
+    m_BestFit: 0
+    m_MinSize: 5
     m_MaxSize: 99
     m_Alignment: 1
     m_AlignByGeometry: 0
@@ -1784,7 +1784,10 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Press Space to Jump
+  m_Text: 'Press Space to Jump
+
+
+    Collect the Crystal on the top'
 --- !u!222 &1825023417
 CanvasRenderer:
   m_ObjectHideFlags: 0
