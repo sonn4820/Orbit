@@ -20,13 +20,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Lose.unity
     guid: 53e611d63f3351d4a8c300ae3bbc9943
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Menu.unity
     guid: 283f2930809dd574f857e2730a2e3c97
   - enabled: 1
     path: Assets/Scenes/Win.unity
     guid: 0a5a144fa5329c94684f090d84855b00
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Credit.unity
     guid: f227526eea7fdc442b6372350d871571
   m_configObjects: {}
