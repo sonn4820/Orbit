@@ -302,6 +302,8 @@ Assets\Scripts\Objects\Medium.cs
 Assets\Scripts\Objects\Slow.cs
 Assets\Scripts\Player\Camera.cs
 Assets\Scripts\Player\NextLv1.cs
+Assets\Scripts\Player\NextLv2.cs
+Assets\Scripts\Player\NextLv3.cs
 Assets\Scripts\Player\Player.cs
 Assets\Scripts\UI\Restart.cs
 Assets\Scripts\UI\Title.cs

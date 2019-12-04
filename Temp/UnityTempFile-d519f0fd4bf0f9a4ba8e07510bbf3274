@@ -1,15 +1,11 @@
 /target:library
 /nowarn:0169
-/out:Temp/Unity.RenderPipelines.Core.Runtime.dll
-/unsafe
+/out:Temp/Assembly-CSharp.dll
 /debug:portable
 /optimize-
 /nostdlib+
 /preferreduilang:en-US
 /langversion:latest
-/reference:Library/ScriptAssemblies/UnityEditor.UI.dll
-/reference:Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll
-/reference:Library/ScriptAssemblies/UnityEngine.UI.dll
 /reference:"D:/Riot Games/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.dll"
 /reference:"D:/Riot Games/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll"
 /reference:"D:/Riot Games/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.ARModule.dll"
@@ -71,11 +67,26 @@
 /reference:"D:/Riot Games/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.WindModule.dll"
 /reference:"D:/Riot Games/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.XRModule.dll"
 /reference:"D:/Riot Games/Unity/Editor/Data/Managed/UnityEditor.dll"
-/reference:"D:/Riot Games/Unity/Editor/Data/UnityExtensions/Unity/UnityVR/Editor/UnityEditor.VR.dll"
-/reference:"D:/Riot Games/Unity/Editor/Data/Managed/UnityEditor.Graphs.dll"
-/reference:"D:/Riot Games/Unity/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll"
-/reference:"D:/Riot Games/Unity/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll"
-/reference:"C:/Program Files (x86)/Microsoft Visual Studio Tools for Unity/15.0/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll"
+/reference:Library/ScriptAssemblies/Unity.Timeline.Editor.dll
+/reference:Library/ScriptAssemblies/Unity.VSCode.Editor.dll
+/reference:Library/ScriptAssemblies/Unity.RenderPipelines.Core.Editor.dll
+/reference:Library/ScriptAssemblies/Unity.RenderPipelines.Core.Runtime.dll
+/reference:Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll
+/reference:Library/ScriptAssemblies/Unity.RenderPipelines.Lightweight.Runtime.dll
+/reference:Library/ScriptAssemblies/Unity.RenderPipelines.Lightweight.Editor.dll
+/reference:Library/ScriptAssemblies/UnityEngine.UI.dll
+/reference:Library/ScriptAssemblies/Unity.Timeline.dll
+/reference:Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll
+/reference:Library/ScriptAssemblies/Unity.Postprocessing.Editor.dll
+/reference:Library/ScriptAssemblies/Unity.Rider.Editor.dll
+/reference:Library/ScriptAssemblies/Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll
+/reference:Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll
+/reference:Library/ScriptAssemblies/Unity.Postprocessing.Runtime.dll
+/reference:Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll
+/reference:Library/ScriptAssemblies/Unity.ShaderGraph.Editor.dll
+/reference:Library/ScriptAssemblies/Unity.RenderPipelines.Core.ShaderLibrary.dll
+/reference:Library/ScriptAssemblies/Unity.TextMeshPro.dll
+/reference:Library/ScriptAssemblies/UnityEditor.UI.dll
 /reference:"D:/Riot Games/Unity/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll"
 /reference:"D:/Riot Games/Unity/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/Microsoft.Win32.Primitives.dll"
 /reference:"D:/Riot Games/Unity/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.AppContext.dll"
@@ -285,23 +296,14 @@
 /define:UNITY_POST_PROCESSING_STACK_V2
 /define:CSHARP_7_OR_LATER
 /define:CSHARP_7_3_OR_NEWER
-"C:\Users\sonng\Documents\QU\GDD 210\Project2\Project_2_Orbit\Project_2\Library\PackageCache\com.unity.render-pipelines.core@6.9.1\Runtime\Common\CommandBufferPool.cs"
-"C:\Users\sonng\Documents\QU\GDD 210\Project2\Project_2_Orbit\Project_2\Library\PackageCache\com.unity.render-pipelines.core@6.9.1\Runtime\Common\CommonStructs.cs"
-"C:\Users\sonng\Documents\QU\GDD 210\Project2\Project_2_Orbit\Project_2\Library\PackageCache\com.unity.render-pipelines.core@6.9.1\Runtime\Common\XRGraphics.cs"
-"C:\Users\sonng\Documents\QU\GDD 210\Project2\Project_2_Orbit\Project_2\Library\PackageCache\com.unity.render-pipelines.core@6.9.1\Runtime\Debugging\ProfilingSample.cs"
-"C:\Users\sonng\Documents\QU\GDD 210\Project2\Project_2_Orbit\Project_2\Library\PackageCache\com.unity.render-pipelines.core@6.9.1\Runtime\LookDev\IDataProvider.cs"
-"C:\Users\sonng\Documents\QU\GDD 210\Project2\Project_2_Orbit\Project_2\Library\PackageCache\com.unity.render-pipelines.core@6.9.1\Runtime\Textures\MSAASamples.cs"
-"C:\Users\sonng\Documents\QU\GDD 210\Project2\Project_2_Orbit\Project_2\Library\PackageCache\com.unity.render-pipelines.core@6.9.1\Runtime\Utilities\CameraCaptureBridge.cs"
-"C:\Users\sonng\Documents\QU\GDD 210\Project2\Project_2_Orbit\Project_2\Library\PackageCache\com.unity.render-pipelines.core@6.9.1\Runtime\Utilities\ColorUtils.cs"
-"C:\Users\sonng\Documents\QU\GDD 210\Project2\Project_2_Orbit\Project_2\Library\PackageCache\com.unity.render-pipelines.core@6.9.1\Runtime\Utilities\CoreRenderPipelinePreferences.cs"
-"C:\Users\sonng\Documents\QU\GDD 210\Project2\Project_2_Orbit\Project_2\Library\PackageCache\com.unity.render-pipelines.core@6.9.1\Runtime\Utilities\CoreUtils.cs"
-"C:\Users\sonng\Documents\QU\GDD 210\Project2\Project_2_Orbit\Project_2\Library\PackageCache\com.unity.render-pipelines.core@6.9.1\Runtime\Utilities\HableCurve.cs"
-"C:\Users\sonng\Documents\QU\GDD 210\Project2\Project_2_Orbit\Project_2\Library\PackageCache\com.unity.render-pipelines.core@6.9.1\Runtime\Utilities\HaltonSequence.cs"
-"C:\Users\sonng\Documents\QU\GDD 210\Project2\Project_2_Orbit\Project_2\Library\PackageCache\com.unity.render-pipelines.core@6.9.1\Runtime\Utilities\ResourceReloader.cs"
-"C:\Users\sonng\Documents\QU\GDD 210\Project2\Project_2_Orbit\Project_2\Library\PackageCache\com.unity.render-pipelines.core@6.9.1\Runtime\Utilities\XRUtils.cs"
-"C:\Users\sonng\Documents\QU\GDD 210\Project2\Project_2_Orbit\Project_2\Library\PackageCache\com.unity.render-pipelines.core@6.9.1\Runtime\Volume\Volume.cs"
-"C:\Users\sonng\Documents\QU\GDD 210\Project2\Project_2_Orbit\Project_2\Library\PackageCache\com.unity.render-pipelines.core@6.9.1\Runtime\Volume\VolumeComponent.cs"
-"C:\Users\sonng\Documents\QU\GDD 210\Project2\Project_2_Orbit\Project_2\Library\PackageCache\com.unity.render-pipelines.core@6.9.1\Runtime\Volume\VolumeManager.cs"
-"C:\Users\sonng\Documents\QU\GDD 210\Project2\Project_2_Orbit\Project_2\Library\PackageCache\com.unity.render-pipelines.core@6.9.1\Runtime\Volume\VolumeParameter.cs"
-"C:\Users\sonng\Documents\QU\GDD 210\Project2\Project_2_Orbit\Project_2\Library\PackageCache\com.unity.render-pipelines.core@6.9.1\Runtime\Volume\VolumeProfile.cs"
-"C:\Users\sonng\Documents\QU\GDD 210\Project2\Project_2_Orbit\Project_2\Library\PackageCache\com.unity.render-pipelines.core@6.9.1\Runtime\Volume\VolumeStack.cs"
+Assets\Scripts\Objects\Fast.cs
+Assets\Scripts\Objects\Lava.cs
+Assets\Scripts\Objects\Medium.cs
+Assets\Scripts\Objects\Slow.cs
+Assets\Scripts\Player\Camera.cs
+Assets\Scripts\Player\NextLv1.cs
+Assets\Scripts\Player\NextLv2.cs
+Assets\Scripts\Player\NextLv3.cs
+Assets\Scripts\Player\Player.cs
+Assets\Scripts\UI\Restart.cs
+Assets\Scripts\UI\Title.cs

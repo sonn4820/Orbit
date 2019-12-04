@@ -296,6 +296,7 @@
 /define:UNITY_POST_PROCESSING_STACK_V2
 /define:CSHARP_7_OR_LATER
 /define:CSHARP_7_3_OR_NEWER
+Assets\Scripts\Objects\Fast.cs
 Assets\Scripts\Objects\Lava.cs
 Assets\Scripts\Objects\Medium.cs
 Assets\Scripts\Objects\Slow.cs
@@ -305,3 +306,4 @@ Assets\Scripts\Player\NextLv2.cs
 Assets\Scripts\Player\NextLv3.cs
 Assets\Scripts\Player\Player.cs
 Assets\Scripts\UI\Restart.cs
+Assets\Scripts\UI\Title.cs

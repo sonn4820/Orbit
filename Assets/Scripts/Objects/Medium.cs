@@ -5,7 +5,7 @@ using UnityEngine;
 public class Medium : MonoBehaviour
 {
     public Transform Player;
-    private float gForce = 3f;
+    private float gForce = 5f;
     private Vector3 dir;
 
     // Start is called before the first frame update

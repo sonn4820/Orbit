@@ -5,7 +5,7 @@ using UnityEngine;
 public class Fast : MonoBehaviour
 {
     public Transform Player;
-    private float gForce = 4f;
+    private float gForce = 5f;
     private Vector3 dir;
 
     // Start is called before the first frame update
