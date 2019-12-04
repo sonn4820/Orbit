@@ -5,7 +5,7 @@ using UnityEngine;
 public class Fast : MonoBehaviour
 {
     public Transform Player;
-    private float gForce = 4.5f;
+    private float gForce = 4f;
     private Vector3 dir;
 
     // Start is called before the first frame update
@@ -22,6 +22,6 @@ public class Fast : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Rotate(0, 0, 4.5f);
+        transform.Rotate(0, 0, 4f);
     }
 }
