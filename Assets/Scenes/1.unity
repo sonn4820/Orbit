@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -130,10 +130,10 @@ GameObject:
   m_Component:
   - component: {fileID: 22405180}
   - component: {fileID: 22405179}
-  - component: {fileID: 22405181}
   - component: {fileID: 22405182}
   - component: {fileID: 22405183}
   - component: {fileID: 22405184}
+  - component: {fileID: 22405181}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -257,7 +257,7 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 10
   m_LinearDrag: 0
-  m_AngularDrag: 0
+  m_AngularDrag: 0.5
   m_GravityScale: 0
   m_Material: {fileID: 6200000, guid: 52c5d68c743a60445b0ddd76ef8ed0b7, type: 2}
   m_Interpolate: 0
@@ -293,7 +293,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &91423522
 RectTransform:
   m_ObjectHideFlags: 0
