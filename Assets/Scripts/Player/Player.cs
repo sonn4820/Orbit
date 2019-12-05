@@ -9,7 +9,9 @@ public class Player : MonoBehaviour
     private Vector3 moveDirection = Vector3.down; //Start by moving down.
     Rigidbody2D RB;
     float jumpForce = 1300f;
-    
+    public Medium OrbitScript;
+
+    //public float gForce = 6f;
 
     private void Update()
     {
@@ -22,14 +24,15 @@ public class Player : MonoBehaviour
         //If on the circle, update our moveDirection vector and wait for SPACE to jump.
         else
         {
+            AttachToOrbit();
             moveDirection = (transform.position - circleAttachedTo.position);
             Debug.DrawLine(transform.position, transform.position + moveDirection);
             //Jumped, so detach from circle.
             if (Input.GetKeyDown(KeyCode.Space))
             {
+                onCircle = false;
                 GetComponent<Rigidbody2D>().AddForce(new Vector2(0, jumpForce));
                 Debug.Log("Jumped!");
-                onCircle = false;
                 transform.SetParent(null);
             }
         }
@@ -38,15 +41,24 @@ public class Player : MonoBehaviour
     {
         if (collision.gameObject.tag == "orbit")
         {
+            OrbitScript = collision.transform.GetComponent<Medium>();
             Debug.Log("Hit Circle!");
             onCircle = true;
             circleAttachedTo = collision.transform;
-            transform.SetParent(circleAttachedTo);   
+            transform.SetParent(circleAttachedTo);
         }
 
         if (collision.gameObject.tag == "lava")
         {
             Destroy(this.gameObject);
         }
+    }
+
+    public void AttachToOrbit()
+    {
+        Vector3 dir;
+        dir = (circleAttachedTo.position - transform.position).normalized;
+        GetComponent<Rigidbody2D>().AddForce(dir * OrbitScript.gForce);
+        //Debug.Log(OrbitScript.gForce);
     }
 }

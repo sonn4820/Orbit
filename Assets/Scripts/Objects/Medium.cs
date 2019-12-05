@@ -5,23 +5,24 @@ using UnityEngine;
 public class Medium : MonoBehaviour
 {
     public Transform Player;
-    private float gForce = 6f;
+    public float gForce = 6f;
     private Vector3 dir;
+    public float SpinSpeed;
 
     // Start is called before the first frame update
-    void Start()
-    {
-        dir = Vector3.zero;
-    }
-    void FixedUpdate()
-    {
-        dir = (transform.position - Player.position).normalized;
-        Player.GetComponent<Rigidbody2D>().AddForce(dir * gForce);
-    }
+    //void Start()
+    //{
+    //    dir = Vector3.zero;
+    //}
+    //public void FixedUpdate()
+    //{
+    //    dir = (transform.position - Player.position).normalized;
+    //    Player.GetComponent<Rigidbody2D>().AddForce(dir * gForce);
+    //}
 
     // Update is called once per frame
     void Update()
     {
-        transform.Rotate(0, 0, 3.5f);
+        transform.Rotate(0, 0, SpinSpeed);
     }
 }
