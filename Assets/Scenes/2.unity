@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -1547,6 +1547,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 1811939381}
+  gForce: 10
+  SpinSpeed: 3.5
 --- !u!50 &616275869
 Rigidbody2D:
   serializedVersion: 4
@@ -1560,8 +1562,8 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 1
-  m_AngularDrag: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.5
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
@@ -1907,6 +1909,7 @@ GameObject:
   - component: {fileID: 969229536}
   - component: {fileID: 969229535}
   - component: {fileID: 969229534}
+  - component: {fileID: 969229539}
   m_Layer: 0
   m_Name: O3
   m_TagString: orbit
@@ -1921,7 +1924,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 969229533}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c3e9e716ed038424189989d4169def0b, type: 3}
   m_Name: 
@@ -1939,9 +1942,9 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
+  m_Mass: 5
+  m_LinearDrag: 1
+  m_AngularDrag: 1
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
@@ -2027,6 +2030,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &969229539
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 969229533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f54f4dc0908d5a40b61f72719bd52db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Player: {fileID: 1811939381}
+  gForce: 5
+  SpinSpeed: 3.5
 --- !u!1 &1007449712
 GameObject:
   m_ObjectHideFlags: 0
@@ -2361,6 +2379,7 @@ GameObject:
   - component: {fileID: 1083367784}
   - component: {fileID: 1083367783}
   - component: {fileID: 1083367782}
+  - component: {fileID: 1083367787}
   m_Layer: 0
   m_Name: O2 (1)
   m_TagString: orbit
@@ -2412,7 +2431,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1083367781}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 46bac33c8e5def54d9c7ad5aff71c30d, type: 3}
   m_Name: 
@@ -2481,6 +2500,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1083367787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1083367781}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f54f4dc0908d5a40b61f72719bd52db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Player: {fileID: 1811939381}
+  gForce: 10
+  SpinSpeed: 5
 --- !u!1 &1088477253
 GameObject:
   m_ObjectHideFlags: 0
@@ -2853,6 +2887,7 @@ GameObject:
   - component: {fileID: 1232035301}
   - component: {fileID: 1232035300}
   - component: {fileID: 1232035299}
+  - component: {fileID: 1232035304}
   m_Layer: 0
   m_Name: O2
   m_TagString: orbit
@@ -2904,7 +2939,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1232035298}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 46bac33c8e5def54d9c7ad5aff71c30d, type: 3}
   m_Name: 
@@ -2973,6 +3008,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1232035304
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1232035298}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f54f4dc0908d5a40b61f72719bd52db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Player: {fileID: 1811939381}
+  gForce: 6
+  SpinSpeed: 0
 --- !u!1 &1240482967
 GameObject:
   m_ObjectHideFlags: 0
@@ -3006,6 +3056,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 1811939381}
+  gForce: 6
+  SpinSpeed: 0
 --- !u!50 &1240482969
 Rigidbody2D:
   serializedVersion: 4
@@ -4153,7 +4205,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1811939380}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.74, y: -2.21, z: 0}
+  m_LocalPosition: {x: 0.74, y: -2.6, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 289510101}
@@ -4205,6 +4257,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b98129c9128d55d49961426fb385c091, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OrbitScript: {fileID: 0}
 --- !u!58 &1811939385
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -4303,6 +4356,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 1811939381}
+  gForce: 6
+  SpinSpeed: 0
 --- !u!50 &1961211046
 Rigidbody2D:
   serializedVersion: 4
@@ -4416,6 +4471,7 @@ GameObject:
   - component: {fileID: 1987230461}
   - component: {fileID: 1987230460}
   - component: {fileID: 1987230459}
+  - component: {fileID: 1987230464}
   m_Layer: 0
   m_Name: O3 (1)
   m_TagString: orbit
@@ -4430,7 +4486,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1987230458}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c3e9e716ed038424189989d4169def0b, type: 3}
   m_Name: 
@@ -4536,6 +4592,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1987230464
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1987230458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f54f4dc0908d5a40b61f72719bd52db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Player: {fileID: 1811939381}
+  gForce: 15
+  SpinSpeed: 5
 --- !u!1 &2010835532
 GameObject:
   m_ObjectHideFlags: 0
