@@ -63,10 +63,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Objects\Fast.cs" />
+    <Compile Include="Assets\Scripts\Objects\FlashyWin.cs" />
     <Compile Include="Assets\Scripts\Objects\Lava.cs" />
     <Compile Include="Assets\Scripts\Objects\Medium.cs" />
     <Compile Include="Assets\Scripts\Objects\Slow.cs" />
     <Compile Include="Assets\Scripts\Player\Camera.cs" />
+    <Compile Include="Assets\Scripts\Player\CrystalSpinWin.cs" />
     <Compile Include="Assets\Scripts\Player\NextLv1.cs" />
     <Compile Include="Assets\Scripts\Player\NextLv2.cs" />
     <Compile Include="Assets\Scripts\Player\NextLv3.cs" />
