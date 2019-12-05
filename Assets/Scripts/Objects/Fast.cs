@@ -16,7 +16,7 @@ public class Fast : MonoBehaviour
     void FixedUpdate()
     {
         dir = (transform.position - Player.position).normalized;
-        Player.GetComponent<Rigidbody2D>().AddForce(dir * gForce);
+        Player.GetComponent<Rigidbody2D>().AddForce( dir * gForce);
     }
 
     // Update is called once per frame

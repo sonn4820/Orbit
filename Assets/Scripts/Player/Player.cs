@@ -8,7 +8,7 @@ public class Player : MonoBehaviour
     private bool onCircle;
     private Vector3 moveDirection = Vector3.down; //Start by moving down.
     Rigidbody2D RB;
-    float jumpForce = 1400f;
+    float jumpForce = 1300f;
     
 
     private void Update()
