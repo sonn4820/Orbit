@@ -198,8 +198,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 22405178}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.05, y: -1.93, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -0.05, y: -2.44, z: 0}
+  m_LocalScale: {x: 1.25, y: 1.25, z: 1.25}
   m_Children:
   - {fileID: 130018441}
   m_Father: {fileID: 0}
@@ -233,6 +233,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b98129c9128d55d49961426fb385c091, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OrbitScript: {fileID: 0}
 --- !u!50 &22405183
 Rigidbody2D:
   serializedVersion: 4
@@ -245,7 +246,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 10
+  m_Mass: 15
   m_LinearDrag: 0
   m_AngularDrag: 0
   m_GravityScale: 0
@@ -546,6 +547,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 22405180}
+  gForce: 10
+  SpinSpeed: 3.5
 --- !u!1 &170572593
 GameObject:
   m_ObjectHideFlags: 0
@@ -559,7 +562,7 @@ GameObject:
   - component: {fileID: 170572596}
   m_Layer: 0
   m_Name: Column (7)
-  m_TagString: lava
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -736,7 +739,7 @@ GameObject:
   - component: {fileID: 419104561}
   m_Layer: 0
   m_Name: Column (8)
-  m_TagString: lava
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -976,7 +979,7 @@ GameObject:
   - component: {fileID: 442309594}
   m_Layer: 0
   m_Name: Column (4)
-  m_TagString: lava
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1326,6 +1329,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 22405180}
+  gForce: 10
+  SpinSpeed: 3.5
 --- !u!50 &590833839
 Rigidbody2D:
   serializedVersion: 4
@@ -1439,7 +1444,7 @@ GameObject:
   - component: {fileID: 592999196}
   m_Layer: 0
   m_Name: Column (3)
-  m_TagString: lava
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1626,7 +1631,7 @@ GameObject:
   - component: {fileID: 692879210}
   m_Layer: 0
   m_Name: Column (14)
-  m_TagString: lava
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1638,13 +1643,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 692879208}
-  m_LocalRotation: {x: 0.7071068, y: -0.7071068, z: -0, w: 0}
-  m_LocalPosition: {x: -0.9, y: -3.73, z: 24.594364}
+  m_LocalRotation: {x: 0.58661795, y: -0.8098638, z: -0, w: 0}
+  m_LocalPosition: {x: -0.98, y: -3.7, z: 24.594364}
   m_LocalScale: {x: 1, y: 0.7965829, z: 1}
   m_Children: []
   m_Father: {fileID: 1607316508}
   m_RootOrder: 13
-  m_LocalEulerAnglesHint: {x: 180, y: 0, z: 90}
+  m_LocalEulerAnglesHint: {x: 180, y: -0.000015258789, z: 108.16499}
 --- !u!61 &692879210
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1731,6 +1736,7 @@ GameObject:
   - component: {fileID: 734857026}
   - component: {fileID: 734857025}
   - component: {fileID: 734857024}
+  - component: {fileID: 734857027}
   m_Layer: 0
   m_Name: crystal
   m_TagString: crystal
@@ -1812,12 +1818,24 @@ Transform:
   m_GameObject: {fileID: 734857023}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.15, y: 11.31, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.7, y: 1.7, z: 1.7}
   m_Children:
   - {fileID: 1595241795}
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &734857027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 734857023}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9773068ee478d17448f1e2d32bd27963, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &754391150
 GameObject:
   m_ObjectHideFlags: 0
@@ -1831,7 +1849,7 @@ GameObject:
   - component: {fileID: 754391152}
   m_Layer: 0
   m_Name: Column (10)
-  m_TagString: lava
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1938,7 +1956,7 @@ GameObject:
   - component: {fileID: 764062101}
   m_Layer: 0
   m_Name: Column (9)
-  m_TagString: lava
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2191,7 +2209,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 803105389}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.004, y: -9.01, z: 0}
+  m_LocalPosition: {x: 0.004, y: -10.13, z: 0}
   m_LocalScale: {x: 1.0464984, y: 1.032, z: 1.032}
   m_Children:
   - {fileID: 1892754525}
@@ -2268,7 +2286,7 @@ GameObject:
   - component: {fileID: 921929495}
   m_Layer: 0
   m_Name: Column (15)
-  m_TagString: lava
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2280,13 +2298,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 921929493}
-  m_LocalRotation: {x: 0.7071068, y: -0.7071068, z: -0, w: 0}
-  m_LocalPosition: {x: 2.974, y: 1.24, z: 24.594364}
+  m_LocalRotation: {x: 0.8226682, y: -0.56852174, z: -0, w: 0}
+  m_LocalPosition: {x: 2.88, y: 1.5, z: 24.594364}
   m_LocalScale: {x: 1, y: 0.631013, z: 1}
   m_Children: []
   m_Father: {fileID: 1607316508}
   m_RootOrder: 14
-  m_LocalEulerAnglesHint: {x: 180, y: 0, z: 90}
+  m_LocalEulerAnglesHint: {x: 180, y: -0.000015258789, z: 69.29399}
 --- !u!61 &921929495
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2455,7 +2473,7 @@ GameObject:
   - component: {fileID: 1053105791}
   m_Layer: 0
   m_Name: Column
-  m_TagString: lava
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2562,7 +2580,7 @@ GameObject:
   - component: {fileID: 1075730635}
   m_Layer: 0
   m_Name: Column (6)
-  m_TagString: lava
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2666,9 +2684,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1097907152}
   - component: {fileID: 1097907151}
-  - component: {fileID: 1097907150}
   - component: {fileID: 1097907149}
   - component: {fileID: 1097907148}
+  - component: {fileID: 1097907150}
   m_Layer: 0
   m_Name: O2 (1)
   m_TagString: orbit
@@ -2690,7 +2708,7 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0.5
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
@@ -2722,10 +2740,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1097907147}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 46bac33c8e5def54d9c7ad5aff71c30d, type: 3}
+  m_Script: {fileID: 11500000, guid: 8f54f4dc0908d5a40b61f72719bd52db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 22405180}
+  Player: {fileID: 0}
+  gForce: 10
+  SpinSpeed: 3.5
 --- !u!212 &1097907151
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2802,7 +2822,7 @@ GameObject:
   - component: {fileID: 1156882257}
   m_Layer: 0
   m_Name: Column (16)
-  m_TagString: lava
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2909,7 +2929,7 @@ GameObject:
   - component: {fileID: 1174001922}
   m_Layer: 0
   m_Name: Column (1)
-  m_TagString: lava
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3116,6 +3136,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 22405180}
+  gForce: 10
+  SpinSpeed: 3.5
 --- !u!50 &1188065475
 Rigidbody2D:
   serializedVersion: 4
@@ -3130,7 +3152,7 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
-  m_AngularDrag: 0
+  m_AngularDrag: 0.5
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
@@ -3229,7 +3251,7 @@ GameObject:
   - component: {fileID: 1199100131}
   m_Layer: 0
   m_Name: Column (2)
-  m_TagString: lava
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3333,9 +3355,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1319320208}
   - component: {fileID: 1319320207}
-  - component: {fileID: 1319320210}
   - component: {fileID: 1319320209}
   - component: {fileID: 1319320211}
+  - component: {fileID: 1319320210}
   m_Layer: 0
   m_Name: O2
   m_TagString: orbit
@@ -3431,10 +3453,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1319320206}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 46bac33c8e5def54d9c7ad5aff71c30d, type: 3}
+  m_Script: {fileID: 11500000, guid: 8f54f4dc0908d5a40b61f72719bd52db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 22405180}
+  Player: {fileID: 0}
+  gForce: 10
+  SpinSpeed: 3.5
 --- !u!50 &1319320211
 Rigidbody2D:
   serializedVersion: 4
@@ -3449,7 +3473,7 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0.5
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
@@ -3469,7 +3493,7 @@ GameObject:
   - component: {fileID: 1327548957}
   m_Layer: 0
   m_Name: Column (5)
-  m_TagString: lava
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3825,7 +3849,7 @@ GameObject:
   - component: {fileID: 1824311949}
   m_Layer: 0
   m_Name: Column (11)
-  m_TagString: lava
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4002,7 +4026,7 @@ GameObject:
   - component: {fileID: 1977173914}
   m_Layer: 0
   m_Name: Column (13)
-  m_TagString: lava
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4109,7 +4133,7 @@ GameObject:
   - component: {fileID: 2016311831}
   m_Layer: 0
   m_Name: Column (12)
-  m_TagString: lava
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4382,7 +4406,7 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0.5
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
@@ -4398,7 +4422,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 2095319963}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c3e9e716ed038424189989d4169def0b, type: 3}
+  m_Script: {fileID: 11500000, guid: 8f54f4dc0908d5a40b61f72719bd52db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 22405180}
+  Player: {fileID: 0}
+  gForce: 10
+  SpinSpeed: 3.5
