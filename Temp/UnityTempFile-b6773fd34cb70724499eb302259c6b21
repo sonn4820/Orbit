@@ -296,6 +296,8 @@
 /define:UNITY_POST_PROCESSING_STACK_V2
 /define:CSHARP_7_OR_LATER
 /define:CSHARP_7_3_OR_NEWER
+Assets\Scripts\Objects\BounceLeft.cs
+Assets\Scripts\Objects\BounceRight.cs
 Assets\Scripts\Objects\Falldown.cs
 Assets\Scripts\Objects\FlashyWin.cs
 Assets\Scripts\Objects\Lava.cs
