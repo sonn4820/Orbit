@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -1425,7 +1425,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 590833837}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.25, y: -0.37, z: 0}
+  m_LocalPosition: {x: 1.53, y: -0.18, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1645,7 +1645,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 692879208}
   m_LocalRotation: {x: 0.58661795, y: -0.8098638, z: -0, w: 0}
-  m_LocalPosition: {x: -0.81, y: -5.67, z: 24.594364}
+  m_LocalPosition: {x: -0.93, y: -5.85, z: 24.594364}
   m_LocalScale: {x: 1, y: 0.7965829, z: 1}
   m_Children: []
   m_Father: {fileID: 1607316508}
@@ -2328,8 +2328,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 921929493}
   m_LocalRotation: {x: 0.8226682, y: -0.56852174, z: -0, w: 0}
-  m_LocalPosition: {x: 2.83, y: -0.09, z: 24.594364}
-  m_LocalScale: {x: 1, y: 0.631013, z: 1}
+  m_LocalPosition: {x: 2.26, y: -0.31, z: 24.594364}
+  m_LocalScale: {x: 1, y: 0.9497579, z: 1}
   m_Children: []
   m_Father: {fileID: 1607316508}
   m_RootOrder: 14
@@ -2845,7 +2845,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1097907147}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.18, y: 2.27, z: 0}
+  m_LocalPosition: {x: -1.21, y: 1.99, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
