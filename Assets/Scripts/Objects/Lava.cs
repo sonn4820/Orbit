@@ -9,7 +9,7 @@ public class Lava : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        speed += Time.deltaTime * 1f;
+        speed += Time.deltaTime * 0.6f;
     }
 
     // Update is called once per frame
