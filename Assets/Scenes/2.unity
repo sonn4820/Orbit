@@ -240,6 +240,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9e07fba0388fad4581f06ecaf9d8be6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  RockCollide: {fileID: 478474659}
   player: {fileID: 1811939380}
 --- !u!1 &45089411
 GameObject:
@@ -361,6 +362,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4447a99e058adb045907613be357408e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  RockCollide: {fileID: 478474659}
   player: {fileID: 1811939380}
 --- !u!1 &46673480
 GameObject:
@@ -720,6 +722,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4447a99e058adb045907613be357408e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  RockCollide: {fileID: 478474659}
   player: {fileID: 1811939380}
 --- !u!1 &235323582
 GameObject:
@@ -841,6 +844,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 006643a99f6adb142ab187261db00d0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  RockCollide: {fileID: 478474659}
   player: {fileID: 1811939380}
 --- !u!1 &240358343
 GameObject:
@@ -1334,7 +1338,135 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 006643a99f6adb142ab187261db00d0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  RockCollide: {fileID: 478474659}
   player: {fileID: 1811939380}
+--- !u!1 &424191977
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 424191978}
+  - component: {fileID: 424191979}
+  m_Layer: 0
+  m_Name: OrbitCollide
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &424191978
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 424191977}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 788615045}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &424191979
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 424191977}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: e8b157439d2d5fc42a4fc78e8796be0f, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.5
+  m_Pitch: 0.5
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &450975174
 GameObject:
   m_ObjectHideFlags: 0
@@ -1455,7 +1587,135 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 006643a99f6adb142ab187261db00d0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  RockCollide: {fileID: 478474659}
   player: {fileID: 1811939380}
+--- !u!1 &478474657
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 478474658}
+  - component: {fileID: 478474659}
+  m_Layer: 0
+  m_Name: RockCollide
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &478474658
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 478474657}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.024297118, y: -2.6041923, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 788615045}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &478474659
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 478474657}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: db1e4e775152c4943b5a0e0c17652a12, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &560216223
 GameObject:
   m_ObjectHideFlags: 0
@@ -1631,7 +1891,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 1811939381}
-  gForce: 10
+  gForce: 15
   SpinSpeed: 3.5
 --- !u!50 &616275869
 Rigidbody2D:
@@ -1886,6 +2146,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 006643a99f6adb142ab187261db00d0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  RockCollide: {fileID: 478474659}
   player: {fileID: 1811939380}
 --- !u!1 &758738147
 GameObject:
@@ -2007,7 +2268,41 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9e07fba0388fad4581f06ecaf9d8be6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  RockCollide: {fileID: 478474659}
   player: {fileID: 1811939380}
+--- !u!1 &788615044
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 788615045}
+  m_Layer: 0
+  m_Name: Sounds
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &788615045
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 788615044}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.024297118, y: 2.6041923, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1001507129}
+  - {fileID: 424191978}
+  - {fileID: 478474658}
+  m_Father: {fileID: 0}
+  m_RootOrder: 16
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &969229533
 GameObject:
   m_ObjectHideFlags: 0
@@ -2020,7 +2315,6 @@ GameObject:
   - component: {fileID: 969229537}
   - component: {fileID: 969229536}
   - component: {fileID: 969229535}
-  - component: {fileID: 969229534}
   - component: {fileID: 969229539}
   m_Layer: 0
   m_Name: O3
@@ -2029,18 +2323,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &969229534
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 969229533}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c3e9e716ed038424189989d4169def0b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!50 &969229535
 Rigidbody2D:
   serializedVersion: 4
@@ -2154,8 +2436,135 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 1811939381}
-  gForce: 10
-  SpinSpeed: 3.5
+  gForce: 15
+  SpinSpeed: 7
+--- !u!1 &1001507128
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1001507129}
+  - component: {fileID: 1001507130}
+  m_Layer: 0
+  m_Name: LavaDeath
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1001507129
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1001507128}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 788615045}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &1001507130
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1001507128}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 9a7ad310b8050fc46a2c6be153aba356, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1007449712
 GameObject:
   m_ObjectHideFlags: 0
@@ -2276,6 +2685,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9e07fba0388fad4581f06ecaf9d8be6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  RockCollide: {fileID: 478474659}
   player: {fileID: 1811939380}
 --- !u!1 &1053948518
 GameObject:
@@ -2397,6 +2807,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9e07fba0388fad4581f06ecaf9d8be6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  RockCollide: {fileID: 478474659}
   player: {fileID: 1811939380}
 --- !u!1 &1058773860
 GameObject:
@@ -2518,6 +2929,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 006643a99f6adb142ab187261db00d0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  RockCollide: {fileID: 478474659}
   player: {fileID: 1811939380}
 --- !u!1 &1083367781
 GameObject:
@@ -2665,7 +3077,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 1811939381}
-  gForce: 10
+  gForce: 15
   SpinSpeed: 3.5
 --- !u!1 &1088477253
 GameObject:
@@ -2835,6 +3247,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4447a99e058adb045907613be357408e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  RockCollide: {fileID: 478474659}
   player: {fileID: 1811939380}
 --- !u!1 &1136478103
 GameObject:
@@ -2956,6 +3369,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4447a99e058adb045907613be357408e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  RockCollide: {fileID: 478474659}
   player: {fileID: 1811939380}
 --- !u!1 &1189061900
 GameObject:
@@ -3200,7 +3614,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 1811939381}
-  gForce: 10
+  gForce: 15
   SpinSpeed: 3.5
 --- !u!1 &1240482967
 GameObject:
@@ -3235,8 +3649,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 1811939381}
-  gForce: 10
-  SpinSpeed: 3.5
+  gForce: 15
+  SpinSpeed: 5
 --- !u!50 &1240482969
 Rigidbody2D:
   serializedVersion: 4
@@ -3457,6 +3871,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4447a99e058adb045907613be357408e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  RockCollide: {fileID: 478474659}
   player: {fileID: 1811939380}
 --- !u!1 &1364638881
 GameObject:
@@ -3632,6 +4047,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9e07fba0388fad4581f06ecaf9d8be6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  RockCollide: {fileID: 0}
   player: {fileID: 1811939380}
 --- !u!1 &1395530636
 GameObject:
@@ -3917,6 +4333,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9e07fba0388fad4581f06ecaf9d8be6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  RockCollide: {fileID: 478474659}
   player: {fileID: 1811939380}
 --- !u!1 &1591323555
 GameObject:
@@ -4083,6 +4500,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 006643a99f6adb142ab187261db00d0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  RockCollide: {fileID: 478474659}
   player: {fileID: 1811939380}
 --- !u!1 &1640744500
 GameObject:
@@ -4204,6 +4622,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9e07fba0388fad4581f06ecaf9d8be6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  RockCollide: {fileID: 478474659}
   player: {fileID: 1811939380}
 --- !u!1 &1779220910
 GameObject:
@@ -4441,7 +4860,7 @@ GameObject:
   - component: {fileID: 1811939385}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Player
+  m_TagString: player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4506,6 +4925,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b98129c9128d55d49961426fb385c091, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  LavaDeath: {fileID: 1001507130}
+  OrbitCollide: {fileID: 424191979}
   OrbitScript: {fileID: 0}
 --- !u!58 &1811939385
 CircleCollider2D:
@@ -4605,8 +5026,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 1811939381}
-  gForce: 10
-  SpinSpeed: 3.5
+  gForce: 15
+  SpinSpeed: 5
 --- !u!50 &1961211046
 Rigidbody2D:
   serializedVersion: 4
@@ -4853,8 +5274,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 1811939381}
-  gForce: 10
-  SpinSpeed: 3.5
+  gForce: 15
+  SpinSpeed: 7
 --- !u!1 &2010835532
 GameObject:
   m_ObjectHideFlags: 0
@@ -4975,4 +5396,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4447a99e058adb045907613be357408e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  RockCollide: {fileID: 478474659}
   player: {fileID: 1811939380}

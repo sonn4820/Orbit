@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Falldown : MonoBehaviour
 {
-    
+    public AudioSource RockCollide;
     public GameObject player;
     public void Update()
     {
@@ -15,6 +15,7 @@ public class Falldown : MonoBehaviour
         if(collision.gameObject.tag == "player")
         {
             player.GetComponent<Rigidbody2D>().velocity = new Vector2(0, -6);
+            RockCollide.Play();
         }
     }
 }

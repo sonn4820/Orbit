@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    public AudioSource LavaDeath;
+    public AudioSource OrbitCollide;
+
     private Transform circleAttachedTo;
     private bool onCircle;
     private Vector3 moveDirection = Vector3.down; //Start by moving down.
@@ -46,10 +49,12 @@ public class Player : MonoBehaviour
             onCircle = true;
             circleAttachedTo = collision.transform;
             transform.SetParent(circleAttachedTo);
+            OrbitCollide.Play();
         }
 
         if (collision.gameObject.tag == "lava")
         {
+            LavaDeath.Play();
             Destroy(this.gameObject);
         }
     }

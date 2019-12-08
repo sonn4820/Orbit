@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class BounceLeft : MonoBehaviour
 {
+    public AudioSource RockCollide;
     public GameObject player;
     public void Update()
     {
@@ -14,6 +15,7 @@ public class BounceLeft : MonoBehaviour
         if (collision.gameObject.tag == "player")
         {
             player.GetComponent<Rigidbody2D>().velocity = new Vector2(5, 0);
+            RockCollide.Play();
         }
     }
 }
