@@ -11,7 +11,7 @@ public class Player : MonoBehaviour
     private bool onCircle;
     private Vector3 moveDirection = Vector3.down; //Start by moving down.
     Rigidbody2D RB;
-    float jumpForce = 1400f;
+    float jumpForce = 2000f;
     public Medium OrbitScript;
 
     //public float gForce = 6f;

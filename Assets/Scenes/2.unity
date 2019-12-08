@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -1892,7 +1892,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player: {fileID: 1811939381}
   gForce: 15
-  SpinSpeed: 3.5
+  SpinSpeed: 3
 --- !u!50 &616275869
 Rigidbody2D:
   serializedVersion: 4
@@ -2437,7 +2437,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player: {fileID: 1811939381}
   gForce: 15
-  SpinSpeed: 7
+  SpinSpeed: 5
 --- !u!1 &1001507128
 GameObject:
   m_ObjectHideFlags: 0
@@ -2713,13 +2713,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1053948518}
-  m_LocalRotation: {x: 0.90987074, y: -0.41489175, z: -0, w: 0}
-  m_LocalPosition: {x: 2.72, y: -4.23, z: 24.594364}
-  m_LocalScale: {x: 1, y: 0.7562121, z: 1}
+  m_LocalRotation: {x: 0.8595909, y: -0.510983, z: -0, w: 0}
+  m_LocalPosition: {x: 2.381, y: -4.97, z: 24.594364}
+  m_LocalScale: {x: 1, y: 1.0012249, z: 1}
   m_Children: []
   m_Father: {fileID: 1088477254}
   m_RootOrder: 13
-  m_LocalEulerAnglesHint: {x: 180, y: -0.000015258789, z: 49.024994}
+  m_LocalEulerAnglesHint: {x: 180, y: -0.000015258789, z: 61.458992}
 --- !u!61 &1053948520
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3058,7 +3058,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1083367781}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.96, y: 1.98, z: 0}
+  m_LocalPosition: {x: -0.55, y: 1.39, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -3078,7 +3078,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player: {fileID: 1811939381}
   gForce: 15
-  SpinSpeed: 3.5
+  SpinSpeed: 3
 --- !u!1 &1088477253
 GameObject:
   m_ObjectHideFlags: 0
@@ -3383,6 +3383,7 @@ GameObject:
   - component: {fileID: 1189061901}
   - component: {fileID: 1189061903}
   - component: {fileID: 1189061902}
+  - component: {fileID: 1189061905}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -3468,6 +3469,102 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &1189061905
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1189061900}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: a8f3b54798203304ea59a3d6307fc3b8, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1232035298
 GameObject:
   m_ObjectHideFlags: 0
@@ -3615,7 +3712,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player: {fileID: 1811939381}
   gForce: 15
-  SpinSpeed: 3.5
+  SpinSpeed: 4
 --- !u!1 &1240482967
 GameObject:
   m_ObjectHideFlags: 0
@@ -4206,7 +4303,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1503520813}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.21, y: 11.31, z: 0}
+  m_LocalPosition: {x: -2.15, y: 11.31, z: 0}
   m_LocalScale: {x: 1.7092, y: 1.7092, z: 1.7092}
   m_Children:
   - {fileID: 358392866}
@@ -5027,7 +5124,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player: {fileID: 1811939381}
   gForce: 15
-  SpinSpeed: 5
+  SpinSpeed: 5.5
 --- !u!50 &1961211046
 Rigidbody2D:
   serializedVersion: 4
@@ -5140,7 +5237,6 @@ GameObject:
   - component: {fileID: 1987230462}
   - component: {fileID: 1987230461}
   - component: {fileID: 1987230460}
-  - component: {fileID: 1987230459}
   - component: {fileID: 1987230464}
   m_Layer: 0
   m_Name: O3 (1)
@@ -5149,18 +5245,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1987230459
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1987230458}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c3e9e716ed038424189989d4169def0b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!50 &1987230460
 Rigidbody2D:
   serializedVersion: 4
@@ -5275,7 +5359,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player: {fileID: 1811939381}
   gForce: 15
-  SpinSpeed: 7
+  SpinSpeed: 6
 --- !u!1 &2010835532
 GameObject:
   m_ObjectHideFlags: 0

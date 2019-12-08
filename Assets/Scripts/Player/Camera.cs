@@ -11,14 +11,14 @@ public class Camera : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        offset = transform.position - player.transform.position;
+        offset = transform.position * Time.deltaTime - player.transform.position  ;
     }
 
     // Update is called once per frame
     void Update()
     {
         Vector3 position = transform.position;
-        position.y = (player.transform.position + offset).y;
+        position.y = (player.transform.position + offset).y ;
         transform.position = position;
     }
 }
