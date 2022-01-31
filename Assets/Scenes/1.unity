@@ -43,7 +43,7 @@ RenderSettings:
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
-  serializedVersion: 11
+  serializedVersion: 12
   m_GIWorkflowMode: 1
   m_GISettings:
     serializedVersion: 2
@@ -96,8 +96,9 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaAO: 1
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
+    m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_LightingSettings: {fileID: 1025769496}
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -117,6 +118,8 @@ NavMeshSettings:
     manualTileSize: 0
     tileSize: 256
     accuratePlacement: 0
+    maxJobWorkers: 0
+    preserveTilesOutsideBounds: 0
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
@@ -155,6 +158,8 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -203,7 +208,7 @@ Transform:
   m_Children:
   - {fileID: 130018441}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!58 &22405181
 CircleCollider2D:
@@ -323,11 +328,11 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 0, g: 0, b: 0, a: 0.75686276}
   m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
   m_Type: 1
   m_PreserveAspect: 0
@@ -400,6 +405,8 @@ MonoBehaviour:
   m_UseNormalMap: 0
   m_LightOrder: 0
   m_AlphaBlendOnOverlap: 0
+  m_ShadowIntensity: 0
+  m_ShadowVolumeIntensity: 0
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -425,10 +432,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 138675320}
+  - component: {fileID: 138675323}
   - component: {fileID: 138675319}
   - component: {fileID: 138675321}
   - component: {fileID: 138675322}
-  - component: {fileID: 138675323}
   m_Layer: 0
   m_Name: O1
   m_TagString: orbit
@@ -450,6 +457,8 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -492,12 +501,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 138675318}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.15, y: 5.97, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 2.0841618, y: 5.028376, z: 12.639162}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_Father: {fileID: 2130579975}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!58 &138675321
 CircleCollider2D:
@@ -548,9 +557,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f54f4dc0908d5a40b61f72719bd52db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 22405180}
-  gForce: 15
-  SpinSpeed: 5
+  Player: {fileID: 0}
+  gForce: 3
+  speed: 0
 --- !u!1 &170572593
 GameObject:
   m_ObjectHideFlags: 0
@@ -565,7 +574,7 @@ GameObject:
   - component: {fileID: 170572597}
   m_Layer: 0
   m_Name: Column (7)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -598,6 +607,8 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -671,8 +682,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4447a99e058adb045907613be357408e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RockCollide: {fileID: 757149641}
-  player: {fileID: 22405178}
 --- !u!1 &286452503
 GameObject:
   m_ObjectHideFlags: 0
@@ -704,7 +713,7 @@ Transform:
   - {fileID: 783758860}
   - {fileID: 757149640}
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &376716995
 GameObject:
@@ -760,6 +769,8 @@ MonoBehaviour:
   m_UseNormalMap: 0
   m_LightOrder: 0
   m_AlphaBlendOnOverlap: 0
+  m_ShadowIntensity: 0
+  m_ShadowVolumeIntensity: 0
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -790,7 +801,7 @@ GameObject:
   - component: {fileID: 419104562}
   m_Layer: 0
   m_Name: Column (8)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -823,6 +834,8 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -896,8 +909,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4447a99e058adb045907613be357408e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RockCollide: {fileID: 757149641}
-  player: {fileID: 22405178}
 --- !u!1 &440411474
 GameObject:
   m_ObjectHideFlags: 0
@@ -951,6 +962,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Navigation:
     m_Mode: 3
+    m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
@@ -981,6 +993,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 542659523}
+        m_TargetAssemblyTypeName: 
         m_MethodName: RestartLv1
         m_Mode: 1
         m_Arguments:
@@ -991,8 +1004,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!114 &440411477
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1008,11 +1019,11 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: 2d1b4970e916b444a96d70afea859084, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
@@ -1045,7 +1056,7 @@ GameObject:
   - component: {fileID: 442309595}
   m_Layer: 0
   m_Name: Column (4)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1078,6 +1089,8 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1151,8 +1164,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 006643a99f6adb142ab187261db00d0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RockCollide: {fileID: 757149641}
-  player: {fileID: 22405178}
 --- !u!1 &502559450
 GameObject:
   m_ObjectHideFlags: 0
@@ -1376,7 +1387,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &542659523
 MonoBehaviour:
@@ -1423,6 +1434,8 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1482,10 +1495,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 590833842}
+  - component: {fileID: 590833838}
   - component: {fileID: 590833841}
   - component: {fileID: 590833840}
   - component: {fileID: 590833839}
-  - component: {fileID: 590833838}
   m_Layer: 0
   m_Name: O1 (1)
   m_TagString: orbit
@@ -1505,9 +1518,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f54f4dc0908d5a40b61f72719bd52db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 22405180}
-  gForce: 15
-  SpinSpeed: 4
+  Player: {fileID: 0}
+  gForce: 3
+  speed: 0
 --- !u!50 &590833839
 Rigidbody2D:
   serializedVersion: 4
@@ -1559,6 +1572,8 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1601,12 +1616,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 590833837}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.53, y: -0.18, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 4.764162, y: -1.1216238, z: 12.639162}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_Father: {fileID: 2130579975}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &592999193
 GameObject:
@@ -1622,7 +1637,7 @@ GameObject:
   - component: {fileID: 592999197}
   m_Layer: 0
   m_Name: Column (3)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1655,6 +1670,8 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1728,8 +1745,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 006643a99f6adb142ab187261db00d0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RockCollide: {fileID: 757149641}
-  player: {fileID: 22405178}
 --- !u!1 &678130973
 GameObject:
   m_ObjectHideFlags: 0
@@ -1761,6 +1776,8 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1821,10 +1838,9 @@ GameObject:
   - component: {fileID: 692879209}
   - component: {fileID: 692879211}
   - component: {fileID: 692879210}
-  - component: {fileID: 692879212}
   m_Layer: 0
   m_Name: Column (14)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1883,6 +1899,8 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1918,20 +1936,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &692879212
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 692879208}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9e07fba0388fad4581f06ecaf9d8be6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  RockCollide: {fileID: 757149641}
-  player: {fileID: 22405178}
 --- !u!1 &734857023
 GameObject:
   m_ObjectHideFlags: 0
@@ -1981,6 +1985,8 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -2029,7 +2035,7 @@ Transform:
   m_Children:
   - {fileID: 1595241795}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &734857027
 MonoBehaviour:
@@ -2057,7 +2063,7 @@ GameObject:
   - component: {fileID: 754391154}
   m_Layer: 0
   m_Name: Column (10)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2116,6 +2122,8 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -2163,8 +2171,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9e07fba0388fad4581f06ecaf9d8be6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RockCollide: {fileID: 757149641}
-  player: {fileID: 22405178}
 --- !u!1 &757149639
 GameObject:
   m_ObjectHideFlags: 0
@@ -2306,7 +2312,7 @@ GameObject:
   - component: {fileID: 764062102}
   m_Layer: 0
   m_Name: Column (9)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2339,6 +2345,8 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -2412,8 +2420,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4447a99e058adb045907613be357408e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RockCollide: {fileID: 757149641}
-  player: {fileID: 22405178}
 --- !u!1 &783758859
 GameObject:
   m_ObjectHideFlags: 0
@@ -2593,11 +2599,11 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
   m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 14
@@ -2656,6 +2662,8 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -2700,7 +2708,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 803105389}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.004, y: -10.13, z: 0}
+  m_LocalPosition: {x: 0.004, y: -13.33, z: 0}
   m_LocalScale: {x: 1.0464984, y: 1.032, z: 1.032}
   m_Children:
   - {fileID: 1892754525}
@@ -2764,6 +2772,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63925759e96ae2a43af13fdec57cbf93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 0.002
 --- !u!1 &921929493
 GameObject:
   m_ObjectHideFlags: 0
@@ -2775,10 +2784,9 @@ GameObject:
   - component: {fileID: 921929494}
   - component: {fileID: 921929496}
   - component: {fileID: 921929495}
-  - component: {fileID: 921929497}
   m_Layer: 0
   m_Name: Column (15)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2837,6 +2845,8 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -2872,20 +2882,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &921929497
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 921929493}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9e07fba0388fad4581f06ecaf9d8be6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  RockCollide: {fileID: 757149641}
-  player: {fileID: 22405178}
 --- !u!1 &998917806
 GameObject:
   m_ObjectHideFlags: 0
@@ -2931,6 +2927,8 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -2966,6 +2964,67 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!850595691 &1025769496
+LightingSettings:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Settings.lighting
+  serializedVersion: 3
+  m_GIWorkflowMode: 1
+  m_EnableBakedLightmaps: 0
+  m_EnableRealtimeLightmaps: 0
+  m_RealtimeEnvironmentLighting: 1
+  m_BounceScale: 1
+  m_AlbedoBoost: 1
+  m_IndirectOutputScale: 1
+  m_UsingShadowmask: 1
+  m_BakeBackend: 1
+  m_LightmapMaxSize: 1024
+  m_BakeResolution: 40
+  m_Padding: 2
+  m_TextureCompression: 1
+  m_AO: 0
+  m_AOMaxDistance: 1
+  m_CompAOExponent: 1
+  m_CompAOExponentDirect: 0
+  m_ExtractAO: 0
+  m_MixedBakeMode: 2
+  m_LightmapsBakeMode: 1
+  m_FilterMode: 1
+  m_LightmapParameters: {fileID: 15204, guid: 0000000000000000f000000000000000, type: 0}
+  m_ExportTrainingData: 0
+  m_TrainingDataDestination: TrainingData
+  m_RealtimeResolution: 2
+  m_ForceWhiteAlbedo: 0
+  m_ForceUpdates: 0
+  m_FinalGather: 0
+  m_FinalGatherRayCount: 256
+  m_FinalGatherFiltering: 1
+  m_PVRCulling: 1
+  m_PVRSampling: 1
+  m_PVRDirectSampleCount: 32
+  m_PVRSampleCount: 512
+  m_PVREnvironmentSampleCount: 256
+  m_PVREnvironmentReferencePointCount: 2048
+  m_LightProbeSampleCountMultiplier: 4
+  m_PVRBounces: 2
+  m_PVRMinBounces: 2
+  m_PVREnvironmentMIS: 1
+  m_PVRFilteringMode: 1
+  m_PVRDenoiserTypeDirect: 1
+  m_PVRDenoiserTypeIndirect: 1
+  m_PVRDenoiserTypeAO: 1
+  m_PVRFilterTypeDirect: 0
+  m_PVRFilterTypeIndirect: 0
+  m_PVRFilterTypeAO: 0
+  m_PVRFilteringGaussRadiusDirect: 1
+  m_PVRFilteringGaussRadiusIndirect: 5
+  m_PVRFilteringGaussRadiusAO: 2
+  m_PVRFilteringAtrousPositionSigmaDirect: 0.5
+  m_PVRFilteringAtrousPositionSigmaIndirect: 2
+  m_PVRFilteringAtrousPositionSigmaAO: 1
 --- !u!1 &1053105788
 GameObject:
   m_ObjectHideFlags: 0
@@ -2980,7 +3039,7 @@ GameObject:
   - component: {fileID: 1053105792}
   m_Layer: 0
   m_Name: Column
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3013,6 +3072,8 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -3086,8 +3147,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 006643a99f6adb142ab187261db00d0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RockCollide: {fileID: 757149641}
-  player: {fileID: 22405178}
 --- !u!1 &1075730632
 GameObject:
   m_ObjectHideFlags: 0
@@ -3102,7 +3161,7 @@ GameObject:
   - component: {fileID: 1075730636}
   m_Layer: 0
   m_Name: Column (6)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3135,6 +3194,8 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -3208,8 +3269,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4447a99e058adb045907613be357408e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RockCollide: {fileID: 757149641}
-  player: {fileID: 22405178}
 --- !u!1 &1083089480
 GameObject:
   m_ObjectHideFlags: 0
@@ -3346,10 +3405,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1097907152}
+  - component: {fileID: 1097907150}
   - component: {fileID: 1097907151}
   - component: {fileID: 1097907149}
   - component: {fileID: 1097907148}
-  - component: {fileID: 1097907150}
   m_Layer: 0
   m_Name: O2 (1)
   m_TagString: orbit
@@ -3406,9 +3465,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f54f4dc0908d5a40b61f72719bd52db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 22405180}
-  gForce: 15
-  SpinSpeed: 3
+  Player: {fileID: 0}
+  gForce: 3
+  speed: 0
 --- !u!212 &1097907151
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3423,6 +3482,8 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -3465,12 +3526,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1097907147}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.21, y: 1.99, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 2.0241618, y: 1.0483762, z: 12.639162}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_Father: {fileID: 2130579975}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1156882255
 GameObject:
@@ -3483,10 +3544,9 @@ GameObject:
   - component: {fileID: 1156882256}
   - component: {fileID: 1156882258}
   - component: {fileID: 1156882257}
-  - component: {fileID: 1156882259}
   m_Layer: 0
   m_Name: Column (16)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3545,6 +3605,8 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -3580,20 +3642,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1156882259
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1156882255}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4447a99e058adb045907613be357408e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  RockCollide: {fileID: 757149641}
-  player: {fileID: 22405178}
 --- !u!1 &1174001919
 GameObject:
   m_ObjectHideFlags: 0
@@ -3608,7 +3656,7 @@ GameObject:
   - component: {fileID: 1174001923}
   m_Layer: 0
   m_Name: Column (1)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3641,6 +3689,8 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -3714,8 +3764,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 006643a99f6adb142ab187261db00d0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RockCollide: {fileID: 757149641}
-  player: {fileID: 22405178}
 --- !u!1 &1184788867
 GameObject:
   m_ObjectHideFlags: 0
@@ -3761,6 +3809,8 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -3807,8 +3857,8 @@ GameObject:
   - component: {fileID: 1188065478}
   - component: {fileID: 1188065477}
   - component: {fileID: 1188065476}
-  - component: {fileID: 1188065475}
   - component: {fileID: 1188065474}
+  - component: {fileID: 1188065475}
   m_Layer: 0
   m_Name: O1 (2)
   m_TagString: orbit
@@ -3828,9 +3878,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f54f4dc0908d5a40b61f72719bd52db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 22405180}
-  gForce: 15
-  SpinSpeed: 5
+  Player: {fileID: 0}
+  gForce: 3
+  speed: 0
 --- !u!50 &1188065475
 Rigidbody2D:
   serializedVersion: 4
@@ -3882,6 +3932,8 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -3924,12 +3976,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1188065473}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.97, y: 11.34, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 4.2041616, y: 10.398376, z: 12.639162}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_Father: {fileID: 2130579975}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1199100128
 GameObject:
@@ -3942,10 +3994,9 @@ GameObject:
   - component: {fileID: 1199100129}
   - component: {fileID: 1199100130}
   - component: {fileID: 1199100131}
-  - component: {fileID: 1199100132}
   m_Layer: 0
   m_Name: Column (2)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3978,6 +4029,8 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -4039,20 +4092,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.5, y: 3.67}
   m_EdgeRadius: 0
---- !u!114 &1199100132
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1199100128}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 006643a99f6adb142ab187261db00d0f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  RockCollide: {fileID: 757149641}
-  player: {fileID: 22405178}
 --- !u!1 &1319320206
 GameObject:
   m_ObjectHideFlags: 0
@@ -4062,10 +4101,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1319320208}
+  - component: {fileID: 1319320210}
   - component: {fileID: 1319320207}
   - component: {fileID: 1319320209}
   - component: {fileID: 1319320211}
-  - component: {fileID: 1319320210}
   m_Layer: 0
   m_Name: O2
   m_TagString: orbit
@@ -4087,6 +4126,8 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -4129,12 +4170,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1319320206}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.05, y: -3.57, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 3.2841618, y: -4.511624, z: 12.639162}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_Father: {fileID: 2130579975}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!58 &1319320209
 CircleCollider2D:
@@ -4164,9 +4205,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f54f4dc0908d5a40b61f72719bd52db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 22405180}
-  gForce: 15
-  SpinSpeed: 3
+  Player: {fileID: 0}
+  gForce: 3
+  speed: 0
 --- !u!50 &1319320211
 Rigidbody2D:
   serializedVersion: 4
@@ -4202,7 +4243,7 @@ GameObject:
   - component: {fileID: 1327548958}
   m_Layer: 0
   m_Name: Column (5)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4235,6 +4276,8 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -4308,8 +4351,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4447a99e058adb045907613be357408e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RockCollide: {fileID: 757149641}
-  player: {fileID: 22405178}
 --- !u!1 &1576955091
 GameObject:
   m_ObjectHideFlags: 0
@@ -4397,6 +4438,8 @@ MonoBehaviour:
   m_UseNormalMap: 0
   m_LightOrder: 0
   m_AlphaBlendOnOverlap: 0
+  m_ShadowIntensity: 0
+  m_ShadowVolumeIntensity: 0
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -4518,6 +4561,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
+  m_PresetInfoIsWorld: 0
 --- !u!223 &1622976608
 Canvas:
   m_ObjectHideFlags: 0
@@ -4552,7 +4596,7 @@ RectTransform:
   m_Children:
   - {fileID: 91423522}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -4570,10 +4614,9 @@ GameObject:
   - component: {fileID: 1824311948}
   - component: {fileID: 1824311950}
   - component: {fileID: 1824311949}
-  - component: {fileID: 1824311951}
   m_Layer: 0
   m_Name: Column (11)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4632,6 +4675,8 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -4667,20 +4712,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1824311951
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1824311947}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 006643a99f6adb142ab187261db00d0f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  RockCollide: {fileID: 757149641}
-  player: {fileID: 22405178}
 --- !u!1 &1892754524
 GameObject:
   m_ObjectHideFlags: 0
@@ -4735,6 +4766,8 @@ MonoBehaviour:
   m_UseNormalMap: 0
   m_LightOrder: 1
   m_AlphaBlendOnOverlap: 0
+  m_ShadowIntensity: 0
+  m_ShadowVolumeIntensity: 0
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -4765,7 +4798,7 @@ GameObject:
   - component: {fileID: 1977173916}
   m_Layer: 0
   m_Name: Column (13)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4824,6 +4857,8 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -4871,8 +4906,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9e07fba0388fad4581f06ecaf9d8be6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RockCollide: {fileID: 757149641}
-  player: {fileID: 22405178}
 --- !u!1 &2016311829
 GameObject:
   m_ObjectHideFlags: 0
@@ -4887,7 +4920,7 @@ GameObject:
   - component: {fileID: 2016311833}
   m_Layer: 0
   m_Name: Column (12)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4946,6 +4979,8 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -4993,8 +5028,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9e07fba0388fad4581f06ecaf9d8be6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RockCollide: {fileID: 757149641}
-  player: {fileID: 22405178}
 --- !u!1 &2077127135
 GameObject:
   m_ObjectHideFlags: 0
@@ -5059,7 +5092,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2095319963
 GameObject:
@@ -5070,10 +5103,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2095319965}
+  - component: {fileID: 2095319968}
   - component: {fileID: 2095319964}
   - component: {fileID: 2095319966}
   - component: {fileID: 2095319967}
-  - component: {fileID: 2095319968}
   m_Layer: 0
   m_Name: O3
   m_TagString: orbit
@@ -5095,6 +5128,8 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -5137,12 +5172,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2095319963}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.98, y: 8.24, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 4.214162, y: 7.298376, z: 12.639162}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_Father: {fileID: 2130579975}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!58 &2095319966
 CircleCollider2D:
@@ -5190,9 +5225,45 @@ MonoBehaviour:
   m_GameObject: {fileID: 2095319963}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f54f4dc0908d5a40b61f72719bd52db, type: 3}
+  m_Script: {fileID: 11500000, guid: dead45034265cd6479570c95e04660d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 22405180}
-  gForce: 15
-  SpinSpeed: 6.5
+  Player: {fileID: 0}
+  gForce: 3
+  speed: 0
+--- !u!1 &2130579974
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2130579975}
+  m_Layer: 0
+  m_Name: Orbit
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2130579975
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2130579974}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3.2341619, y: 0.9416238, z: -12.639162}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 138675320}
+  - {fileID: 1319320208}
+  - {fileID: 2095319965}
+  - {fileID: 1097907152}
+  - {fileID: 1188065478}
+  - {fileID: 590833842}
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

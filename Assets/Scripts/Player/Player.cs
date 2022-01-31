@@ -12,7 +12,7 @@ public class Player : MonoBehaviour
     private Vector3 moveDirection = Vector3.down; //Start by moving down.
     Rigidbody2D RB;
     float jumpForce = 2000f;
-    public Medium OrbitScript;
+    public Orbit OrbitScript;
 
     //public float gForce = 6f;
 
@@ -22,7 +22,7 @@ public class Player : MonoBehaviour
         //If not on the circle, keep moving in moveDirection.
         if (!onCircle)
         {
-            transform.position += moveDirection * 3 * Time.deltaTime;
+            transform.position += moveDirection * 5 * Time.deltaTime;
         }
         //If on the circle, update our moveDirection vector and wait for SPACE to jump.
         else
@@ -44,7 +44,7 @@ public class Player : MonoBehaviour
     {
         if (collision.gameObject.tag == "orbit")
         {
-            OrbitScript = collision.transform.GetComponent<Medium>();
+            OrbitScript = collision.transform.GetComponent<Orbit>();
             Debug.Log("Hit Circle!");
             onCircle = true;
             circleAttachedTo = collision.transform;
@@ -57,13 +57,19 @@ public class Player : MonoBehaviour
             LavaDeath.Play();
             Destroy(this.gameObject);
         }
+
+        if (collision.gameObject.tag == "wall")
+        {
+            LavaDeath.Play();
+            Destroy(this.gameObject);
+        }
     }
 
     public void AttachToOrbit()
     {
         Vector3 dir;
         dir = (circleAttachedTo.position - transform.position).normalized;
-        GetComponent<Rigidbody2D>().AddForce(dir * OrbitScript.gForce);
-        //Debug.Log(OrbitScript.gForce);
+        GetComponent<Rigidbody2D>().AddForce(dir * OrbitScript.gForce/2);
+        Debug.Log(OrbitScript.gForce);
     }
 }

@@ -4,13 +4,9 @@ using UnityEngine;
 
 public class Lava : MonoBehaviour
 {
-    float speed = 0.008f;
+    public float speed = 0.004f; // change in inspector, rec value = 0.008f
     
     // Start is called before the first frame update
-    void Start()
-    {
-        //speed += Time.deltaTime * 0.3f;
-    }
 
     // Update is called once per frame
     void Update()

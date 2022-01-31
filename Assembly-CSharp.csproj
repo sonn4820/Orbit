@@ -58,16 +58,16 @@
     <Compile Include="Assets\Scripts\Player\Camera.cs" />
     <Compile Include="Assets\Scripts\UI\Title.cs" />
     <Compile Include="Assets\Scripts\Player\NextLv2.cs" />
-    <Compile Include="Assets\Scripts\Objects\BounceRight.cs" />
-    <Compile Include="Assets\Scripts\Objects\BounceLeft.cs" />
     <Compile Include="Assets\Scripts\UI\Restart.cs" />
-    <Compile Include="Assets\Scripts\Objects\Falldown.cs" />
     <Compile Include="Assets\Scripts\Objects\FlashyWin.cs" />
-    <Compile Include="Assets\Scripts\Objects\Medium.cs" />
+    <Compile Include="Assets\Scripts\Objects\Orbit\Medium.cs" />
     <Compile Include="Assets\Scripts\Objects\MoveHorizontal.cs" />
     <Compile Include="Assets\Scripts\Player\CrystalSpinWin.cs" />
     <Compile Include="Assets\Scripts\Player\NextLv1.cs" />
     <Compile Include="Assets\Scripts\Objects\Lava.cs" />
+    <Compile Include="Assets\Scripts\Objects\Orbit\Low.cs" />
+    <Compile Include="Assets\Scripts\Objects\Orbit\Fast.cs" />
+    <Compile Include="Assets\Scripts\Objects\Orbit\Orbit.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

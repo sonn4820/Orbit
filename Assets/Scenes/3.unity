@@ -43,7 +43,7 @@ RenderSettings:
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
-  serializedVersion: 11
+  serializedVersion: 12
   m_GIWorkflowMode: 1
   m_GISettings:
     serializedVersion: 2
@@ -96,8 +96,10 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaAO: 1
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
+    m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_LightingSettings: {fileID: 4890085278179872738, guid: a4654b211c321954b8b9f3a9de6777da,
+    type: 2}
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -117,6 +119,8 @@ NavMeshSettings:
     manualTileSize: 0
     tileSize: 256
     accuratePlacement: 0
+    maxJobWorkers: 0
+    preserveTilesOutsideBounds: 0
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
@@ -134,7 +138,7 @@ GameObject:
   - component: {fileID: 183835135}
   m_Layer: 0
   m_Name: Column (2)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -193,6 +197,8 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -240,8 +246,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 006643a99f6adb142ab187261db00d0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RockCollide: {fileID: 423080157}
-  player: {fileID: 1632043569}
 --- !u!1 &263915909
 GameObject:
   m_ObjectHideFlags: 0
@@ -296,6 +300,8 @@ MonoBehaviour:
   m_UseNormalMap: 0
   m_LightOrder: 1
   m_AlphaBlendOnOverlap: 0
+  m_ShadowIntensity: 0
+  m_ShadowVolumeIntensity: 0
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -326,7 +332,7 @@ GameObject:
   - component: {fileID: 330445211}
   m_Layer: 0
   m_Name: Column (8)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -385,6 +391,8 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -432,8 +440,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4447a99e058adb045907613be357408e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RockCollide: {fileID: 423080157}
-  player: {fileID: 1632043569}
 --- !u!1 &362931690
 GameObject:
   m_ObjectHideFlags: 0
@@ -575,7 +581,7 @@ GameObject:
   - component: {fileID: 378362107}
   m_Layer: 0
   m_Name: Column (10)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -634,6 +640,8 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -681,8 +689,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9e07fba0388fad4581f06ecaf9d8be6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RockCollide: {fileID: 423080157}
-  player: {fileID: 1632043569}
 --- !u!1 &399215899
 GameObject:
   m_ObjectHideFlags: 0
@@ -697,7 +703,7 @@ GameObject:
   - component: {fileID: 399215903}
   m_Layer: 0
   m_Name: Column (1)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -756,6 +762,8 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -803,8 +811,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 006643a99f6adb142ab187261db00d0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RockCollide: {fileID: 423080157}
-  player: {fileID: 1632043569}
 --- !u!1 &423080155
 GameObject:
   m_ObjectHideFlags: 0
@@ -1180,6 +1186,8 @@ MonoBehaviour:
   m_UseNormalMap: 0
   m_LightOrder: 0
   m_AlphaBlendOnOverlap: 0
+  m_ShadowIntensity: 0
+  m_ShadowVolumeIntensity: 0
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -1248,11 +1256,11 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
   m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 14
@@ -1323,6 +1331,8 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1424,12 +1434,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 647622665}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f54f4dc0908d5a40b61f72719bd52db, type: 3}
+  m_Script: {fileID: 11500000, guid: 08c44c1de14cd744388eb5ffb95b0a19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 0}
-  gForce: 15
-  SpinSpeed: 3
+  gForce: 3
+  speed: 2
 --- !u!212 &647622669
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1444,6 +1454,8 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1486,12 +1498,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 647622665}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.03, y: -3.7200003, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 3.47, y: -2.01, z: 13.569482}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_Father: {fileID: 1864263564}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &650564964
 GameObject:
@@ -1507,7 +1519,7 @@ GameObject:
   - component: {fileID: 650564968}
   m_Layer: 0
   m_Name: Column (7)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1566,6 +1578,8 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1613,8 +1627,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4447a99e058adb045907613be357408e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RockCollide: {fileID: 423080157}
-  player: {fileID: 1632043569}
 --- !u!1 &660087505
 GameObject:
   m_ObjectHideFlags: 0
@@ -1629,7 +1641,7 @@ GameObject:
   - component: {fileID: 660087507}
   m_Layer: 0
   m_Name: Column (17)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1660,8 +1672,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9e07fba0388fad4581f06ecaf9d8be6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RockCollide: {fileID: 423080157}
-  player: {fileID: 1632043569}
 --- !u!61 &660087508
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1702,6 +1712,8 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1751,7 +1763,7 @@ GameObject:
   - component: {fileID: 683175858}
   m_Layer: 0
   m_Name: Column (5)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1810,6 +1822,8 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1857,8 +1871,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4447a99e058adb045907613be357408e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RockCollide: {fileID: 423080157}
-  player: {fileID: 1632043569}
 --- !u!1 &711451345
 GameObject:
   m_ObjectHideFlags: 0
@@ -1873,7 +1885,7 @@ GameObject:
   - component: {fileID: 711451349}
   m_Layer: 0
   m_Name: Column (16)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1932,6 +1944,8 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1979,8 +1993,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4447a99e058adb045907613be357408e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RockCollide: {fileID: 423080157}
-  player: {fileID: 1632043569}
 --- !u!1 &715188977
 GameObject:
   m_ObjectHideFlags: 0
@@ -2035,6 +2047,8 @@ MonoBehaviour:
   m_UseNormalMap: 0
   m_LightOrder: 0
   m_AlphaBlendOnOverlap: 0
+  m_ShadowIntensity: 0
+  m_ShadowVolumeIntensity: 0
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -2121,8 +2135,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 0}
-  gForce: 15
-  SpinSpeed: 3
+  gForce: 3
+  speed: 0
 --- !u!212 &721335856
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2137,6 +2151,8 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -2179,12 +2195,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 721335852}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.15, y: 2.69, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.1364676, y: 0.2555802, z: 13.569482}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_Father: {fileID: 1864263564}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &798498695
 GameObject:
@@ -2200,7 +2216,7 @@ GameObject:
   - component: {fileID: 798498699}
   m_Layer: 0
   m_Name: Column (12)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2259,6 +2275,8 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -2306,8 +2324,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9e07fba0388fad4581f06ecaf9d8be6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RockCollide: {fileID: 423080157}
-  player: {fileID: 1632043569}
 --- !u!1 &860567297
 GameObject:
   m_ObjectHideFlags: 0
@@ -2322,7 +2338,7 @@ GameObject:
   - component: {fileID: 860567301}
   m_Layer: 0
   m_Name: Column (3)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2381,6 +2397,8 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -2428,8 +2446,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 006643a99f6adb142ab187261db00d0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RockCollide: {fileID: 423080157}
-  player: {fileID: 1632043569}
 --- !u!1 &874685242
 GameObject:
   m_ObjectHideFlags: 0
@@ -2494,7 +2510,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &897145045
 GameObject:
@@ -2541,6 +2557,8 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -2621,6 +2639,8 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -2670,7 +2690,7 @@ GameObject:
   - component: {fileID: 954580833}
   m_Layer: 0
   m_Name: Column (9)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2729,6 +2749,8 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -2776,8 +2798,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4447a99e058adb045907613be357408e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RockCollide: {fileID: 423080157}
-  player: {fileID: 1632043569}
 --- !u!1 &968129629
 GameObject:
   m_ObjectHideFlags: 0
@@ -2823,6 +2843,8 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -2890,9 +2912,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f54f4dc0908d5a40b61f72719bd52db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 1632043570}
-  gForce: 15
-  SpinSpeed: 5
+  Player: {fileID: 0}
+  gForce: 3
+  speed: 0
 --- !u!50 &976907495
 Rigidbody2D:
   serializedVersion: 4
@@ -2944,6 +2966,8 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -2986,12 +3010,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 976907493}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.4, y: 6.31, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.8864676, y: 3.87558, z: 13.569482}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_Father: {fileID: 1864263564}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &998591906
 GameObject:
@@ -3007,7 +3031,7 @@ GameObject:
   - component: {fileID: 998591910}
   m_Layer: 0
   m_Name: Column (11)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3066,6 +3090,8 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -3113,8 +3139,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 006643a99f6adb142ab187261db00d0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RockCollide: {fileID: 423080157}
-  player: {fileID: 1632043569}
 --- !u!1 &1133192108
 GameObject:
   m_ObjectHideFlags: 0
@@ -3158,7 +3182,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1186386340
 GameObject:
@@ -3175,7 +3199,7 @@ GameObject:
   - component: {fileID: 1186386345}
   m_Layer: 0
   m_Name: Column (14)
-  m_TagString: player
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3189,7 +3213,7 @@ Transform:
   m_GameObject: {fileID: 1186386340}
   m_LocalRotation: {x: 0.7071068, y: -0.7071068, z: -0, w: 0}
   m_LocalPosition: {x: -1.18, y: -6.24, z: 24.594364}
-  m_LocalScale: {x: 1, y: 0.53532124, z: 1}
+  m_LocalScale: {x: 1, y: 0.44833153, z: 1}
   m_Children: []
   m_Father: {fileID: 2045495716}
   m_RootOrder: 13
@@ -3234,6 +3258,8 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -3295,8 +3321,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9e07fba0388fad4581f06ecaf9d8be6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RockCollide: {fileID: 423080157}
-  player: {fileID: 1632043569}
 --- !u!1 &1328964405
 GameObject:
   m_ObjectHideFlags: 0
@@ -3311,7 +3335,7 @@ GameObject:
   - component: {fileID: 1328964409}
   m_Layer: 0
   m_Name: Column (4)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3370,6 +3394,8 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -3417,8 +3443,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 006643a99f6adb142ab187261db00d0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RockCollide: {fileID: 423080157}
-  player: {fileID: 1632043569}
 --- !u!1 &1330192731
 GameObject:
   m_ObjectHideFlags: 0
@@ -3600,6 +3624,8 @@ MonoBehaviour:
   m_UseNormalMap: 0
   m_LightOrder: 0
   m_AlphaBlendOnOverlap: 0
+  m_ShadowIntensity: 0
+  m_ShadowVolumeIntensity: 0
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -3647,7 +3673,7 @@ Transform:
   - {fileID: 968129630}
   - {fileID: 897145046}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1377795047
 GameObject:
@@ -3681,9 +3707,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f54f4dc0908d5a40b61f72719bd52db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 1632043570}
-  gForce: 15
-  SpinSpeed: 6
+  Player: {fileID: 0}
+  gForce: 3
+  speed: 0
 --- !u!50 &1377795049
 Rigidbody2D:
   serializedVersion: 4
@@ -3735,6 +3761,8 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -3777,12 +3805,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1377795047}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.14, y: 11.16, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 3.4264674, y: 8.72558, z: 13.569482}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_Father: {fileID: 1864263564}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1431986128
 GameObject:
@@ -3816,9 +3844,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f54f4dc0908d5a40b61f72719bd52db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 1632043570}
-  gForce: 15
-  SpinSpeed: 4
+  Player: {fileID: 0}
+  gForce: 3
+  speed: 0
 --- !u!50 &1431986130
 Rigidbody2D:
   serializedVersion: 4
@@ -3870,6 +3898,8 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -3912,12 +3942,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1431986128}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.38, y: 0.63, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 2.32, y: -6.32, z: 13.569482}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_Father: {fileID: 1864263564}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1497319857
 GameObject:
@@ -3972,6 +4002,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Navigation:
     m_Mode: 3
+    m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
@@ -4002,6 +4033,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1133192109}
+        m_TargetAssemblyTypeName: 
         m_MethodName: RestartLv3
         m_Mode: 1
         m_Arguments:
@@ -4012,8 +4044,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!114 &1497319860
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4029,11 +4059,11 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: 2d1b4970e916b444a96d70afea859084, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
@@ -4110,6 +4140,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
+  m_PresetInfoIsWorld: 0
 --- !u!223 &1557934049
 Canvas:
   m_ObjectHideFlags: 0
@@ -4144,7 +4175,7 @@ RectTransform:
   m_Children:
   - {fileID: 1901327880}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -4199,6 +4230,8 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -4247,7 +4280,7 @@ Transform:
   m_Children:
   - {fileID: 1334747596}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1632043569
 GameObject:
@@ -4363,6 +4396,8 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -4427,12 +4462,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1749020584}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f54f4dc0908d5a40b61f72719bd52db, type: 3}
+  m_Script: {fileID: 11500000, guid: dead45034265cd6479570c95e04660d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 0}
-  gForce: 15
-  SpinSpeed: 6
+  gForce: 3
+  speed: 0
 --- !u!50 &1749020586
 Rigidbody2D:
   serializedVersion: 4
@@ -4484,6 +4519,8 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -4526,12 +4563,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1749020584}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.45, y: 8.5, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 3.7364676, y: 6.0655804, z: 13.569482}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_Father: {fileID: 1864263564}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1790710796
 GameObject:
@@ -4548,7 +4585,7 @@ GameObject:
   - component: {fileID: 1790710801}
   m_Layer: 0
   m_Name: Column (15)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4561,8 +4598,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1790710796}
   m_LocalRotation: {x: 0.7071068, y: -0.7071068, z: -0, w: 0}
-  m_LocalPosition: {x: -0.97, y: -0.52, z: 24.594364}
-  m_LocalScale: {x: 1, y: 0.7106002, z: 1}
+  m_LocalPosition: {x: -0.48, y: -0.52, z: 24.594364}
+  m_LocalScale: {x: 1, y: 0.47371495, z: 1}
   m_Children: []
   m_Father: {fileID: 2045495716}
   m_RootOrder: 14
@@ -4607,6 +4644,8 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -4668,8 +4707,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9e07fba0388fad4581f06ecaf9d8be6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RockCollide: {fileID: 423080157}
-  player: {fileID: 1632043569}
 --- !u!1 &1836836281
 GameObject:
   m_ObjectHideFlags: 0
@@ -4702,6 +4739,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63925759e96ae2a43af13fdec57cbf93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 0.004
 --- !u!61 &1836836283
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4761,6 +4799,8 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -4805,12 +4845,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1836836281}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.004, y: -10.35, z: 0}
+  m_LocalPosition: {x: 0.004, y: -12.68, z: 0}
   m_LocalScale: {x: 1.0464984, y: 1.032, z: 1.032}
   m_Children:
   - {fileID: 263915910}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1862683379
 GameObject:
@@ -4826,7 +4866,7 @@ GameObject:
   - component: {fileID: 1862683383}
   m_Layer: 0
   m_Name: Column (6)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4885,6 +4925,8 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -4932,8 +4974,42 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4447a99e058adb045907613be357408e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RockCollide: {fileID: 423080157}
-  player: {fileID: 1632043569}
+--- !u!1 &1864263563
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1864263564}
+  m_Layer: 0
+  m_Name: Orbit
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1864263564
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1864263563}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.2864676, y: 2.4344199, z: -13.569482}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 976907498}
+  - {fileID: 647622670}
+  - {fileID: 721335857}
+  - {fileID: 1431986133}
+  - {fileID: 1377795052}
+  - {fileID: 1749020589}
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1901327879
 GameObject:
   m_ObjectHideFlags: 0
@@ -4988,11 +5064,11 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 0, g: 0, b: 0, a: 0.75686276}
   m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
   m_Type: 1
   m_PreserveAspect: 0
@@ -5025,7 +5101,7 @@ GameObject:
   - component: {fileID: 1933906976}
   m_Layer: 0
   m_Name: Column (13)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5084,6 +5160,8 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -5131,8 +5209,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9e07fba0388fad4581f06ecaf9d8be6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RockCollide: {fileID: 423080157}
-  player: {fileID: 1632043569}
 --- !u!1 &1948925220
 GameObject:
   m_ObjectHideFlags: 0
@@ -5147,7 +5223,7 @@ GameObject:
   - component: {fileID: 1948925224}
   m_Layer: 0
   m_Name: Column
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5206,6 +5282,8 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -5253,8 +5331,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 006643a99f6adb142ab187261db00d0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RockCollide: {fileID: 423080157}
-  player: {fileID: 1632043569}
 --- !u!1 &2041057360
 GameObject:
   m_ObjectHideFlags: 0
@@ -5286,7 +5362,7 @@ Transform:
   - {fileID: 1330192732}
   - {fileID: 423080156}
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2045495715
 GameObject:
@@ -5334,5 +5410,5 @@ Transform:
   - {fileID: 711451346}
   - {fileID: 660087506}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
