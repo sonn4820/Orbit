@@ -8,8 +8,8 @@ public class Medium : Orbit
     protected virtual void Start()
     {
         base.Start();
-        speed = 1.25f;
-        gForce = 3f;
+        speed = 1f;
+        gForce = 1.5f;
     }
 
     // Update is called once per frame

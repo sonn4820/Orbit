@@ -8,8 +8,8 @@ public class Fast : Orbit
     protected virtual void Start()
     {
         base.Start();
-        speed = 1.75f;
-        gForce = 5f;
+        speed = 1.5f;
+        gForce = 2f;
     }
 
     // Update is called once per frame
