@@ -14,7 +14,7 @@ public class NextLv3 : MonoBehaviour
     // Update is called once per frame
     public void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "crystal")
+        if (collision.gameObject.tag == "player")
         {
             SceneManager.LoadScene("Win");
         }

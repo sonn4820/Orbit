@@ -8,7 +8,7 @@ public class Medium : Orbit
     protected virtual void Start()
     {
         base.Start();
-        speed = 1f;
+        speed = 325f;
         gForce = 1.5f;
     }
 

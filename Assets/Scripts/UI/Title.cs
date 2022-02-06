@@ -5,26 +5,16 @@ using UnityEngine.SceneManagement;
 
 public class Title : MonoBehaviour
 {
-    public GameObject panel;
     public GameObject panel2;
 
     public void Start()
     {
-        panel.gameObject.SetActive(false);
         panel2.gameObject.SetActive(false);
     }
     // Start is called before the first frame update
     public void Play()
     {
-        SceneManager.LoadScene("1");
-    }
-    public void Option1()
-    {
-        panel.gameObject.SetActive(true);
-    }
-    public void Option2()
-    {
-        panel.gameObject.SetActive(false);
+        SceneManager.LoadScene("Tutorial");
     }
 
     // Update is called once per frame

@@ -22,6 +22,10 @@ public class Restart : MonoBehaviour
     }
 
     // Update is called once per frame
+    public void RestartTut()
+    {
+        SceneManager.LoadScene("Tutorial");
+    }
     public void RestartLv1()
     {
         SceneManager.LoadScene("1");
