@@ -53,6 +53,7 @@
     <UnityVersion>2020.3.16f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Assets\NextLv.cs" />
     <Compile Include="Assets\Scripts\Player\Player.cs" />
     <Compile Include="Assets\Scripts\Player\NextLv3.cs" />
     <Compile Include="Assets\Scripts\Player\Camera.cs" />
@@ -61,6 +62,7 @@
     <Compile Include="Assets\Scripts\Objects\Orbit\Fast.cs" />
     <Compile Include="Assets\Scripts\Objects\Orbit\Low.cs" />
     <Compile Include="Assets\Scripts\UI\Restart.cs" />
+    <Compile Include="Assets\Scripts\Objects\Orbit\Tut.cs" />
     <Compile Include="Assets\Scripts\Objects\FlashyWin.cs" />
     <Compile Include="Assets\Scripts\Objects\Orbit\Orbit.cs" />
     <Compile Include="Assets\Scripts\Objects\Orbit\Medium.cs" />
@@ -68,8 +70,9 @@
     <Compile Include="Assets\Scripts\Player\CrystalSpinWin.cs" />
     <Compile Include="Assets\Scripts\Player\NextLv1.cs" />
     <Compile Include="Assets\Scripts\Objects\Lava.cs" />
-    <Compile Include="Assets\NextLv.cs" />
-    <Compile Include="Assets\Scripts\Objects\Orbit\Tut.cs" />
+    <Compile Include="Assets\Scripts\Tutorial\Popup.cs" />
+    <Compile Include="Assets\Scripts\Tutorial\Popup1.cs" />
+    <Compile Include="Assets\Scripts\Tutorial\Popup2.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

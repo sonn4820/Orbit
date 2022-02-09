@@ -8,7 +8,7 @@ public class Fast : Orbit
     protected virtual void Start()
     {
         base.Start();
-        speed = 475f;
+        speed = 420f;
         gForce = 2f;
     }
 

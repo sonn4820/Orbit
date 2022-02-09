@@ -6,6 +6,8 @@ public class Player : MonoBehaviour
 {
     public AudioSource LavaDeath;
     public AudioSource OrbitCollide;
+    public GameObject Spark;
+    private bool isCreated;
 
     private Transform circleAttachedTo;
     private bool onCircle;
@@ -37,6 +39,7 @@ public class Player : MonoBehaviour
                 GetComponent<Rigidbody2D>().AddForce(new Vector2(0, jumpForce));
                 Debug.Log("Jumped!");
                 transform.SetParent(null);
+                isCreated = false;
             }
         }
     }
@@ -50,6 +53,11 @@ public class Player : MonoBehaviour
             circleAttachedTo = collision.transform;
             transform.SetParent(circleAttachedTo);
             OrbitCollide.Play();
+            if (!isCreated)
+            {
+                Instantiate(Spark, transform.position, transform.rotation);
+                isCreated = true;
+            }
         }
 
         if (collision.gameObject.tag == "lava")

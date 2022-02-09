@@ -8,7 +8,7 @@ public class Low : Orbit
     protected virtual void Start()
     {
         base.Start();
-        speed = 175f;
+        speed = 180f;
         gForce = 1f;
     }
 
