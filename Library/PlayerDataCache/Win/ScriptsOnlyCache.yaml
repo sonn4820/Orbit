@@ -22,8 +22,6 @@ ScriptsOnlyBuild:
     - Tut
     Unity.2D.Tilemap.Editor.dll:
     - UnityEditor.Tilemaps.GridPaintingState
-    - UnityEditor.Tilemaps.GridPaletteBrushes
-    - UnityEditor.Tilemaps.GridPalettes
     - UnityEditor.Tilemaps.SceneViewGridManager
     - UnityEditor.Tilemaps.SceneViewOpenTilePaletteHelper
     - UnityEditor.Tilemaps.TileDragAndDropManager
@@ -160,11 +158,11 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 7076}
     - Class: 114
-      Script: {instanceID: 19848}
+      Script: {instanceID: 19536}
     - Class: 114
-      Script: {instanceID: 19850}
+      Script: {instanceID: 19544}
     - Class: 114
-      Script: {instanceID: 19852}
+      Script: {instanceID: 19550}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -253,13 +251,13 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 7076}
     - Class: 114
-      Script: {instanceID: 19848}
+      Script: {instanceID: 19536}
     - Class: 114
-      Script: {instanceID: 19850}
+      Script: {instanceID: 19544}
     - Class: 114
-      Script: {instanceID: 19852}
+      Script: {instanceID: 19550}
     - Class: 114
-      Script: {instanceID: 43332}
+      Script: {instanceID: 27924}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -348,11 +346,11 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 7076}
     - Class: 114
-      Script: {instanceID: 19848}
+      Script: {instanceID: 19536}
     - Class: 114
-      Script: {instanceID: 19850}
+      Script: {instanceID: 19544}
     - Class: 114
-      Script: {instanceID: 19852}
+      Script: {instanceID: 19550}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -580,11 +578,11 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 6780}
     - Class: 114
-      Script: {instanceID: 19848}
+      Script: {instanceID: 19536}
     - Class: 114
-      Script: {instanceID: 19850}
+      Script: {instanceID: 19544}
     - Class: 114
-      Script: {instanceID: 19852}
+      Script: {instanceID: 19550}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
