@@ -298,8 +298,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Credit\nLead Dev & Artist:\nSon Nguyen\nLuis Zuno\n\nLead Designer & Audio:\nPaulo
-    DaCosta\n\nCreated in GDD 210 in Fall 2019 \nRevised in GDD 411 in Spring 2022\n"
+  m_Text: "Credit\nLead Dev & Artist:\nSon Nguyen\n\nLead Designer & Audio:\nPaulo
+    DaCosta\n\nSpecial thanks to Luis Zuno for background art and animation\n\nCreated
+    in GDD 210 in Fall 2019 \nRevised in GDD 411 in Spring 2022\n"
 --- !u!222 &412091669
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1061,7 +1062,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b9992e5ca3889142a436276a032a00c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  panel: {fileID: 0}
   panel2: {fileID: 1556771224}
 --- !u!4 &1130557014
 Transform:
